@@ -1,0 +1,34 @@
+isolation_forest:
+  n_estimators: 200
+  contamination: 0.01
+  random_state: 42
+
+one_class_svm:
+  kernel: "rbf"
+  nu: 0.01
+  gamma: "scale"
+
+local_outlier_factor:
+  n_neighbors: 20
+  contamination: 0.01
+
+autoencoder:
+  hidden_dims: [64, 16, 64]
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  device: "cpu"
+
+lstm_autoencoder:
+  hidden_size: 32
+  num_layers: 2
+  seq_len: 32
+  epochs: 40
+  batch_size: 64
+  lr: 0.001
+  device: "cpu"
+
+ensemble:
+  methods: ["zscore", "isolation_forest", "autoencoder"]
+  weights: [0.2, 0.4, 0.4]
+  aggregation: "weighted_mean" 

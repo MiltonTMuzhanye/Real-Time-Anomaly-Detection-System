@@ -1,0 +1,14 @@
+prometheus:
+  enabled: true
+  port: 8001
+  metrics_path: "/metrics"
+
+logging:
+  level: "INFO"
+  file: "monitoring/logging/app.log"
+  rotate_mb: 20
+  backups: 5
+
+drift:
+  window: 500
+  psi_threshold: 0.2

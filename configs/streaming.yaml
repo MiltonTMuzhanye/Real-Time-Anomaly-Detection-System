@@ -1,0 +1,15 @@
+stream:
+  buffer_size: 4096
+  emit_interval_ms: 100
+  replay_speed: 20.0 
+  cooldown_events: 10
+
+websocket:
+  host: "0.0.0.0"
+  port: 8765
+
+kafka:
+  enabled: false
+  bootstrap_servers: "localhost:9092"
+  topic: "nab-timeseries"
+  group_id: "anomaly-detector"
